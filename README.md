@@ -22,7 +22,7 @@ I used public data provided by Motivate International Inc. (Divvy Trip Data).
 * **Data Selection:** I selected the Q1 2019 and Q1 2020 datasets to compare year-over-year trends.
 * **Privacy:** PII (Personally Identifiable Information) was removed ensuring data integrity.
 
-**Data Source**
+**Data Source:**
 The data used for this analysis is available here:
 * [Divvy Trip Data 2019 Q1](https://docs.google.com/spreadsheets/d/1uCTsHlZLm4L7-ueaSLwDg0ut3BP_V4mKDo2IMpaXrk4/template/preview?resourcekey=0-dQAUjAu2UUCsLEQQt20PDA#gid=1797029090)
 * [Divvy Trip Data 2020 Q1](https://docs.google.com/spreadsheets/d/179QVLO_yu5BJEKFVZShsKag74ZaUYIF6FevLYzs3hRc/template/preview#gid=640449855)
