@@ -1,37 +1,54 @@
-# Cyclistic Bike-Share Analysis 🚴‍♀️
-**Google Data Analytics Capstone Project**
+# 🚴‍♀️ Cyclistic Bike-Share: Case Study
+**How does a bike-share navigate speedy success?**
 
-## 📌 Project Overview
-[cite_start]As a Junior Data Analyst at Cyclistic, a fictional bike-share company in Chicago, I was tasked with analyzing historical trip data to identify trends in how different customer types use bikes[cite: 9].
+## 👋 Introduction
+Hi, I'm Azhar! As part of the Google Data Analytics Professional Certificate, I acted as a Junior Data Analyst for Cyclistic, a fictional bike-share company.
 
-**The Business Problem:**
-[cite_start]The director of marketing believes the company’s future success depends on maximizing the number of annual memberships[cite: 10]. [cite_start]My goal was to design marketing strategies to convert casual riders into annual members by understanding their distinct behavioral differences[cite: 12].
-
-## 🛠️ Tech Stack
-* **Language:** Python 3.11
-* **Libraries:** Pandas (Data Manipulation), Matplotlib & Seaborn (Data Visualization), Glob (File Merging)
-* **Environment:** Jupyter Notebook
-
-## 📊 Data Source
-[cite_start]I used Cyclistic's historical trip data (Divvy 2019 Q1 and Divvy 2020 Q1)[cite: 66].
-* [cite_start]**Data Integrity:** The data was anonymized (no PII) and unbiased[cite: 69].
-* **Size:** Processed over 700,000 ride records.
-
-## 🔍 Key Insights
-1.  **Weekly Routine:** Annual members act as commuters, with peak usage on weekdays (Mon-Fri). [cite_start]Casual riders act as tourists/leisure users, with peak usage on weekends[cite: 41].
-2.  **Ride Duration:** Casual riders have a significantly higher average trip duration compared to members.
-3.  **The "Thursday Surprise":** While casual ride volume is highest on weekends, their *longest* rides consistently occur on Thursdays.
-
-## 📈 Visualizations
-* ![Ride Frequency](Visualization/ride_frequency.png)
-* *Figure 1: Ride Frequency by Day of Week*
-
-## 💡 Recommendations
-[cite_start]Based on the analysis, I recommend the following marketing strategies to the executive team[cite: 52]:
-1.  **"Weekend Warrior" Membership:** Create a weekend-only membership tier to capture the high volume of casual riders on Saturdays and Sundays.
-2.  **"Thirsty Thursday" Promo:** Target casual riders with a discount on annual memberships if they complete a ride over 30 minutes on a Thursday.
-3.  **Commuter Incentives:** Offer gamified rewards for casual riders who try commuting during peak weekday hours (7-9 AM).
+**The Goal:** Design marketing strategies to convert casual riders into annual members.
+**My Role:** Analyze historical bike trip data to uncover trends and behavioral differences between these two groups.
+**Tools Used:** Python (Pandas, Matplotlib, Seaborn) — *Chosen over Excel due to the large dataset size (700k+ rows).*
 
 ---
-*Author: Azhar Fachrezi*
-*Date: January 2026*
+
+## 🧭 The Analysis Journey
+I followed the six steps of the data analysis process to ensure a structured approach.
+
+### 1. Ask
+**Business Task:** Identify how annual members and casual riders use Cyclistic bikes differently.
+* *Stakeholders:* Lily Moreno (Director of Marketing), Executive Team.
+
+### 2. Prepare
+I used public data provided by Motivate International Inc. (Divvy Trip Data).
+* **Data Selection:** I selected the Q1 2019 and Q1 2020 datasets to compare year-over-year trends.
+* **Privacy:** PII (Personally Identifiable Information) was removed ensuring data integrity.
+
+### 3. Process
+This phase involved cleaning the data to ensure accuracy.
+* **Challenge:** The 2019 and 2020 datasets had different column names. I used Python to rename and standardize columns before merging.
+* **Cleaning:** I removed trips with negative duration (system errors) and created new columns for `ride_length` and `day_of_week`.
+
+### 4. Analyze
+This is where the magic happened! I discovered three key insights:
+1.  **The "Weekend Warrior" Effect:** Casual riders peak on Saturdays and Sundays, while members use bikes consistently on weekdays (commuting).
+2.  **Duration Gap:** Casual riders stay on bikes 2x longer than members on average.
+3.  **The Thursday Surprise:** While casuals ride *most often* on weekends, their *longest* rides actually happen on Thursdays.
+
+### 5. Share
+I created visualizations to communicate these findings effectively.
+
+**Insight 1: Casuals ride for fun (Weekends), Members ride for work (Weekdays)**
+![Ride Frequency Chart](Visualization/ride_frequency.png)
+
+**Insight 2: Casuals take their longest trips on Thursdays**
+![Thursday Peak Chart](Visualization/average_trip_duration.png)
+
+### 6. Act
+Based on my analysis, I recommend three marketing strategies:
+1.  **Launch a "Weekend Warrior" Mini-Membership:** A lower-cost pass valid only Fri-Sun to capture the casual market where they are most active.
+2.  **"Thirsty Thursday" Gamification:** Since casuals ride long on Thursdays, offer a discount on annual membership for any rider who clocks >30 mins on a Thursday.
+3.  **Commuter Challenges:** To encourage casuals to ride on weekdays, offer rewards for riding during peak commute hours (7-9 AM).
+
+---
+
+## 🚀 Personal Reflection
+This project was my first deep dive into Python for data analysis. Initially, I attempted to use spreadsheets, but the file size (combining multiple quarters) caused performance issues. Switching to Pandas allowed me to process over 700,000 rows in seconds and gave me more control over the data cleaning process.
